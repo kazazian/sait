@@ -1,0 +1,88 @@
+@import url('reset.css');
+@import url('fonts.css');
+body{
+    background-color: chartreuse;
+}
+.mood{
+    position: absolute;
+    top: 300px;
+    left: 750px;
+    font-size: 90px;
+    font-weight: 700;
+    padding-left: 30px;
+
+}
+.first{
+    overflow-x: hidden;
+    background-image: url("../il.png");
+    height: 857px;
+    width: 100%;
+}
+.tail{
+    position: relative;
+    top: 280px;
+    left: 942px;
+    object-fit: unset;
+    height: 180px;
+    transition: all 0.1s linear;
+    animation: stretch 2s ease-in-out infinite;
+    width: 500px;
+}
+.wide{
+    width: 1000px;
+}
+#face{
+    height: 857px;   
+
+}
+.pushText{
+    padding: 30px 0;
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+.second{
+    overflow-x: hidden;
+    background-image: url("../фон.png");
+
+    height: 810px;
+    background-repeat: no-repeat;
+}
+.lie{
+    position: relative;
+    top: 170px;
+    left:301px;
+    animation: none;
+}
+.lie.moveDown {
+    animation: moveDown 0.2s linear forwards;
+}
+@keyframes moveDown {
+    0% {
+        transform: translate(0, 0);   
+    }
+    10% {
+        transform: translate(-100px, 40px); 
+    }
+    90% {
+        transform: translate(-100px, 230px);
+    }
+    100% {
+        transform: translate(-100px, 230px);
+    }
+}
+.digit {
+    position: fixed;
+    pointer-events: none;
+    animation: blink 1s infinite;
+    font-size: 27px;
+    font-family: 'Lato';
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
